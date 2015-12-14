@@ -1,0 +1,239 @@
+@prefix soup: <http://www.isa.us.es/soup>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+
+soup:AroundPreference a rdfs:Class;
+    rdfs:label "AroundPreference";
+    rdfs:subClassOf soup:QuantitativeAtomicPreference.
+
+soup:AtomicPreference a rdfs:Class;
+    rdfs:label "AtomicPreference";
+    rdfs:subClassOf soup:PreferenceTerm.
+
+soup:BetweenPreference a rdfs:Class;
+    rdfs:label "BetweenPreference";
+    rdfs:subClassOf soup:QuantitativeAtomicPreference.
+
+soup:CompositePreference a rdfs:Class;
+    rdfs:label "CompositePreference";
+    rdfs:subClassOf soup:PreferenceTerm.
+
+soup:DefuzzyficationFunction a rdfs:Class ;
+    rdfs:label "DefuzzyficationFunction" ;
+    rdfs:subClassOf soup:RealFunction .
+
+soup:DislikesPreference a rdfs:Class ;
+    rdfs:label "DislikesPreference" ;
+    rdfs:subClassOf soup:QualitativeAtomicPreference .
+
+soup:ExplicitPreference a rdfs:Class ;
+    rdfs:label "ExplicitPreference" ;
+    rdfs:subClassOf soup:QualitativeAtomicPreference .
+
+soup:FavoritesAlternativePreference a rdfs:Class ;
+    rdfs:label "FavoritesAlternativePreference" ;
+    rdfs:subClassOf soup:QualitativeAtomicPreference .
+
+soup:FavoritesDislikesPreference a rdfs:Class ;
+    rdfs:label "FavoritesDislikesPreference" ;
+    rdfs:subClassOf soup:QualitativeAtomicPreference .
+
+soup:FavoritesPreference a rdfs:Class ;
+    rdfs:label "FavoritesPreference" ;
+    rdfs:subClassOf soup:QualitativeAtomicPreference .
+
+soup:FuzzyConjunctionPreference a rdfs:Class ;
+    rdfs:label "FuzzyConjunctionPreference" ;
+    rdfs:subClassOf soup:FuzzyPreference .
+
+soup:FuzzyDisjunctionPreference a rdfs:Class ;
+    rdfs:label "FuzzyDisjunctionPreference" ;
+    rdfs:subClassOf soup:FuzzyPreference .
+
+soup:FuzzyGoalPreference a rdfs:Class ;
+    rdfs:label "FuzzyGoalPreference" ;
+    rdfs:subClassOf soup:FuzzyPreference .
+
+soup:FuzzyNegationPreference a rdfs:Class ;
+    rdfs:label "FuzzyNegationPreference" ;
+    rdfs:subClassOf soup:FuzzyPreference .
+
+soup:FuzzyPreference a rdfs:Class ;
+    rdfs:label "FuzzyPreference" ;
+    rdfs:subClassOf soup:NumericalPreference .
+
+soup:FuzzyRulePreference a rdfs:Class ;
+    rdfs:label "FuzzyRulePreference" ;
+    rdfs:subClassOf soup:FuzzyPreference .
+
+soup:HighestPreference a rdfs:Class ;
+    rdfs:label "HighestPreference" ;
+    rdfs:subClassOf soup:QuantitativeAtomicPreference .
+
+soup:LowestPreference a rdfs:Class ;
+    rdfs:label "LowestPreference" ;
+    rdfs:subClassOf soup:QuantitativeAtomicPreference .
+
+soup:MembershipFunction a rdfs:Class ;
+    rdfs:label "MembershipFunction" ;
+    rdfs:subClassOf soup:RealFunction .
+
+soup:NumericalPreference a rdfs:Class ;
+    rdfs:label "NumericalPreference" ;
+    rdfs:subClassOf soup:CompositePreference .
+
+soup:BalancedPreference a rdfs:Class ;
+    rdfs:label "BalancedPreference" ;
+    rdfs:subClassOf soup:CompositePreference .
+
+soup:PiecewiseLinearFunction a rdfs:Class ;
+    rdfs:label "PiecewiseLinearFunction" ;
+    rdfs:subClassOf soup:RealFunction .
+
+soup:PreferenceTerm a rdfs:Class ;
+    rdfs:label "PreferenceTerm" ;
+    rdfs:subClassOf rdfs:Resource .
+
+soup:PrioritizedPreference a rdfs:Class ;
+    rdfs:label "PrioritizedPreference" ;
+    rdfs:subClassOf soup:CompositePreference .
+
+soup:Property a rdfs:Class ;
+    rdfs:label "Property" ;
+    rdfs:subClassOf rdfs:Resource .
+
+soup:PropertyValue a rdfs:Class ;
+    rdfs:label "PropertyValue" ;
+    rdfs:subClassOf rdfs:Resource .
+
+soup:QualitativeAtomicPreference a rdfs:Class ;
+    rdfs:label "QualitativeAtomicPreference" ;
+    rdfs:subClassOf soup:AtomicPreference .
+
+soup:QuantitativeAtomicPreference a rdfs:Class ;
+    rdfs:label "QuantitativeAtomicPreference" ;
+    rdfs:subClassOf soup:AtomicPreference .
+
+soup:RankingMechanism a rdfs:Class ;
+    rdfs:label "RankingMechanism" ;
+    rdfs:subClassOf rdfs:Resource .
+
+soup:RealFunction a rdfs:Class ;
+    rdfs:label "RealFunction" ;
+    rdfs:subClassOf rdfs:Resource .
+
+soup:RealPointValue a rdfs:Class ;
+    rdfs:label "RealPointValue" ;
+    rdfs:subClassOf soup:PropertyValue .
+
+soup:ScorePreference a rdfs:Class ;
+    rdfs:label "ScorePreference" ;
+    rdfs:subClassOf soup:QuantitativeAtomicPreference .
+
+soup:TrapezoidMembershipFunction a rdfs:Class ;
+    rdfs:label "TrapezoidMembershipFunction" ;
+    rdfs:subClassOf soup:MembershipFunction,
+        soup:PiecewiseLinearFunction .
+
+soup:WeightedPreference a rdfs:Class ;
+    rdfs:label "WeightedPreference" ;
+    rdfs:subClassOf soup:NumericalPreference .
+
+soup:constitutedBy a rdf:Property ;
+    rdfs:label "constitutedBy" ;
+    rdfs:domain soup:PiecewiseLinearFunction ;
+    rdfs:range soup:RealPointValue .
+
+soup:hasAbscissa a rdf:Property ;
+    rdfs:label "hasAbscissa" ;
+    rdfs:domain soup:RealPointValue ;
+    rdfs:range rdfs:Literal .
+
+soup:hasAlternatives a rdf:Property ;
+    rdfs:label "hasAlternatives" ;
+    rdfs:domain soup:FavoritesAlternativePreference ;
+    rdfs:range soup:PropertyValue ;
+    rdfs:subPropertyOf soup:hasOperands .
+
+soup:hasCombiningFunction a rdf:Property ;
+    rdfs:label "hasCombiningFunction" ;
+    rdfs:domain soup:NumericalPreference ;
+    rdfs:range soup:RealFunction .
+
+soup:hasDefinition a rdf:Property ;
+    rdfs:label "hasDefinition" ;
+    rdfs:domain soup:RealFunction ;
+    rdfs:range rdfs:Literal .
+
+soup:hasDislikes a rdf:Property ;
+    rdfs:label "hasDislikes" ;
+    rdfs:domain soup:DislikesPreference,
+        soup:FavoritesDislikesPreference ;
+    rdfs:range soup:PropertyValue ;
+    rdfs:subPropertyOf soup:hasOperands .
+
+soup:hasFavorites a rdf:Property ;
+    rdfs:label "hasFavorites" ;
+    rdfs:domain soup:FavoritesAlternativePreference,
+        soup:FavoritesDislikesPreference,
+        soup:FavoritesPreference ;
+    rdfs:range soup:PropertyValue ;
+    rdfs:subPropertyOf soup:hasOperands .
+
+soup:hasOrdinate a rdf:Property ;
+    rdfs:label "hasOrdinate" ;
+    rdfs:domain soup:RealPointValue ;
+    rdfs:range rdfs:Literal .
+
+soup:hasRankingMechanism a rdf:Property ;
+    rdfs:label "hasRankingMechanism" ;
+    rdfs:domain soup:PreferenceTerm ;
+    rdfs:range soup:RankingMechanism .
+
+soup:hasRuleConclusion a rdf:Property ;
+    rdfs:label "hasRuleConclusion" ;
+    rdfs:domain soup:FuzzyRulePreference ;
+    rdfs:range soup:PreferenceTerm ;
+    rdfs:subPropertyOf soup:hasRightTerm .
+
+soup:hasRulePremise a rdf:Property ;
+    rdfs:label "hasRulePremise" ;
+    rdfs:domain soup:FuzzyRulePreference ;
+    rdfs:range soup:PreferenceTerm ;
+    rdfs:subPropertyOf soup:hasLeftTerm .
+
+soup:hasScoringFunction a rdf:Property ;
+    rdfs:label "hasScoringFunction" ;
+    rdfs:domain soup:ScorePreference ;
+    rdfs:range soup:RealFunction .
+
+soup:hasValue a rdf:Property ;
+    rdfs:label "hasValue" ;
+    rdfs:range rdfs:Literal .
+
+soup:ofType a rdf:Property ;
+    rdfs:label "ofType" ;
+    rdfs:domain soup:PropertyValue ;
+    rdfs:range soup:Property .
+
+soup:refersTo a rdf:Property ;
+    rdfs:label "refersTo" ;
+    rdfs:domain soup:PreferenceTerm ;
+    rdfs:range soup:Property .
+
+soup:hasLeftTerm a rdf:Property ;
+    rdfs:label "hasLeftTerm" ;
+    rdfs:domain soup:CompositePreference ;
+    rdfs:range soup:PreferenceTerm ;
+    rdfs:subPropertyOf soup:hasOperands .
+
+soup:hasRightTerm a rdf:Property ;
+    rdfs:label "hasRightTerm" ;
+    rdfs:domain soup:CompositePreference ;
+    rdfs:range soup:PreferenceTerm ;
+    rdfs:subPropertyOf soup:hasOperands .
+
+soup:hasOperands a rdf:Property ;
+    rdfs:label "hasOperands" ;
+    rdfs:domain soup:PreferenceTerm ;
+    rdfs:range rdfs:Resource .
