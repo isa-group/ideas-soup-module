@@ -1,0 +1,390 @@
+@prefix :        <http://example.org/cloudComputing/amazonEC2#> .
+@prefix cloud:   <http://example.org/cloudServices#> .
+@prefix gr:      <http://purl.org/goodrelations/v1#> .
+@prefix qudt:    <http://qudt.org/schema/qudt#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+
+
+# Specific unit used by Amazon
+
+:EC2ComputeUnit
+      rdf:type qudt:ResourceUnit , qudt:ComputingUnit ;
+      rdfs:label "EC2 compute unit"^^xsd:string ;
+      qudt:abbreviation "ECU"^^xsd:string ;
+      qudt:conversionMultiplier
+              "1"^^xsd:double ;
+      qudt:conversionOffset
+              "0.0"^^xsd:double ;
+      qudt:description "One EC2 Compute Unit provides the equivalent CPU capacity of a 1.0-1.2 GHz 2007 Opteron or 2007 Xeon processor."^^xsd:string ;
+      qudt:symbol "ECU"^^xsd:string ;
+      skos:exactMatch <http://dbpedia.org/resource/Elastic_compute_unit> .
+
+# Individual services provided by Amazon (only previous generation instance types)
+
+:ec2ClusterComputeEightExtraLargeInstanceType
+      rdf:type cloud:ComputationService ;
+      rdfs:label "amazon elastic compute cloud service cc2.8xlarge instance"^^xsd:string ;
+      cloud:hasComputingPerformance
+              [ rdf:type gr:QuantitativeValueFloat ;
+                gr:hasValueFloat "88"^^xsd:float ;
+                qudt:unit :EC2ComputeUnit
+              ] ;
+      cloud:hasIOPerformance
+              cloud:VeryHighIOPerformance ;
+      cloud:hasInternalStorage
+              [ rdf:type gr:QuantitativeValueFloat ;
+                gr:hasValueFloat "3360"^^xsd:float ;
+                qudt:unit cloud:Gibibyte
+              ] ;
+      cloud:hasMemory
+              [ rdf:type gr:QuantitativeValueFloat ;
+                gr:hasValueFloat "60.5"^^xsd:float ;
+                qudt:unit cloud:Gibibyte
+              ] ;
+      cloud:hasVirtualCores
+              [ rdf:type gr:QuantitativeValueInteger ;
+                gr:hasValueInteger 16 ;
+                qudt:unit <http://qudt.org/vocab/unit#Number>
+              ] .
+
+:ec2ClusterGPUQuadrupleExtraLargeInstanceType
+      rdf:type cloud:ComputationService ;
+      rdfs:label "amazon elastic compute cloud service cg1.4xlarge instance"^^xsd:string ;
+      cloud:hasComputingPerformance
+              [ rdf:type gr:QuantitativeValueFloat ;
+                gr:hasValueFloat "33.5"^^xsd:float ;
+                qudt:unit :EC2ComputeUnit
+              ] ;
+      cloud:hasIOPerformance
+              cloud:VeryHighIOPerformance ;
+      cloud:hasInternalStorage
+              [ rdf:type gr:QuantitativeValueFloat ;
+                gr:hasValueFloat "1680"^^xsd:float ;
+                qudt:unit cloud:Gibibyte
+              ] ;
+      cloud:hasMemory
+              [ rdf:type gr:QuantitativeValueFloat ;
+                gr:hasValueFloat "22.5"^^xsd:float ;
+                qudt:unit cloud:Gibibyte
+              ] ;
+      cloud:hasVirtualCores
+              [ rdf:type gr:QuantitativeValueInteger ;
+                gr:hasValueInteger 8 ;
+                qudt:unit <http://qudt.org/vocab/unit#Number>
+              ] .
+
+:ec2C1HighCPUExtraLargeInstanceType
+      rdf:type cloud:ComputationService ;
+      rdfs:label "amazon elastic compute cloud service c1.xlarge instance"^^xsd:string ;
+      cloud:hasComputingPerformance
+              [ rdf:type gr:QuantitativeValueFloat ;
+                gr:hasValueFloat "20"^^xsd:float ;
+                qudt:unit :EC2ComputeUnit
+              ] ;
+      cloud:hasIOPerformance
+              cloud:HighIOPerformance ;
+      cloud:hasInternalStorage
+              [ rdf:type gr:QuantitativeValueFloat ;
+                gr:hasValueFloat "1680"^^xsd:float ;
+                qudt:unit cloud:Gibibyte
+              ] ;
+      cloud:hasMemory
+              [ rdf:type gr:QuantitativeValueFloat ;
+                gr:hasValueFloat "7"^^xsd:float ;
+                qudt:unit cloud:Gibibyte
+              ] ;
+      cloud:hasVirtualCores
+              [ rdf:type gr:QuantitativeValueInteger ;
+                gr:hasValueInteger 8 ;
+                qudt:unit <http://qudt.org/vocab/unit#Number>
+              ] .
+
+:ec2C1HighCPUMediumInstanceType
+      rdf:type cloud:ComputationService ;
+      rdfs:label "amazon elastic compute cloud service c1.medium instance"^^xsd:string ;
+      cloud:hasComputingPerformance
+              [ rdf:type gr:QuantitativeValueFloat ;
+                gr:hasValueFloat "5"^^xsd:float ;
+                qudt:unit :EC2ComputeUnit
+              ] ;
+      cloud:hasIOPerformance
+              cloud:ModerateIOPerformance ;
+      cloud:hasInternalStorage
+              [ rdf:type gr:QuantitativeValueFloat ;
+                gr:hasValueFloat "340"^^xsd:float ;
+                qudt:unit cloud:Gibibyte
+              ] ;
+      cloud:hasMemory
+              [ rdf:type gr:QuantitativeValueFloat ;
+                gr:hasValueFloat "1.7"^^xsd:float ;
+                qudt:unit cloud:Gibibyte
+              ] ;
+      cloud:hasVirtualCores
+              [ rdf:type gr:QuantitativeValueInteger ;
+                gr:hasValueInteger 2 ;
+                qudt:unit <http://qudt.org/vocab/unit#Number>
+              ].
+
+:ec2HI1HighIOQuadrupleExtraLargeInstanceType
+      rdf:type cloud:ComputationService ;
+      rdfs:label "amazon elastic compute cloud service hi1.4xlarge instance"^^xsd:string ;
+      cloud:hasComputingPerformance
+              [ rdf:type gr:QuantitativeValueFloat ;
+                gr:hasValueFloat "35"^^xsd:float ;
+                qudt:unit :EC2ComputeUnit
+              ] ;
+      cloud:hasIOPerformance
+              cloud:VeryHighIOPerformance ;
+      cloud:hasInternalStorage
+              [ rdf:type gr:QuantitativeValueFloat ;
+                gr:hasValueFloat "2"^^xsd:float ;
+                qudt:unit cloud:Tebibyte
+              ] ;
+      cloud:hasMemory
+              [ rdf:type gr:QuantitativeValueFloat ;
+                gr:hasValueFloat "60.5"^^xsd:float ;
+                qudt:unit cloud:Gibibyte
+              ] ;
+      cloud:hasVirtualCores
+              [ rdf:type gr:QuantitativeValueInteger ;
+                gr:hasValueInteger 8 ;
+                qudt:unit <http://qudt.org/vocab/unit#Number>
+              ] .
+
+:ec2M2HighMemoryDoubleExtraLargeInstanceType
+      rdf:type cloud:ComputationService ;
+      rdfs:label "amazon elastic compute cloud service m2.2xlarge instance"^^xsd:string ;
+      cloud:hasComputingPerformance
+              [ rdf:type gr:QuantitativeValueFloat ;
+                gr:hasValueFloat "13"^^xsd:float ;
+                qudt:unit :EC2ComputeUnit
+              ] ;
+      cloud:hasIOPerformance
+              cloud:ModerateIOPerformance ;
+      cloud:hasInternalStorage
+              [ rdf:type gr:QuantitativeValueFloat ;
+                gr:hasValueFloat "850"^^xsd:float ;
+                qudt:unit cloud:Gibibyte
+              ] ;
+      cloud:hasMemory
+              [ rdf:type gr:QuantitativeValueFloat ;
+                gr:hasValueFloat "34.2"^^xsd:float ;
+                qudt:unit cloud:Gibibyte
+              ] ;
+      cloud:hasVirtualCores
+              [ rdf:type gr:QuantitativeValueInteger ;
+                gr:hasValueInteger 4 ;
+                qudt:unit <http://qudt.org/vocab/unit#Number>
+              ] .
+
+:ec2M2HighMemoryExtraLargeInstanceType
+      rdf:type cloud:ComputationService ;
+      rdfs:label "amazon elastic compute cloud service m2.xlarge instance"^^xsd:string ;
+      cloud:hasComputingPerformance
+              [ rdf:type gr:QuantitativeValueFloat ;
+                gr:hasValueFloat "6.5"^^xsd:float ;
+                qudt:unit :EC2ComputeUnit
+              ] ;
+      cloud:hasIOPerformance
+              cloud:ModerateIOPerformance ;
+      cloud:hasInternalStorage
+              [ rdf:type gr:QuantitativeValueFloat ;
+                gr:hasValueFloat "420"^^xsd:float ;
+                qudt:unit cloud:Gibibyte
+              ] ;
+      cloud:hasMemory
+              [ rdf:type gr:QuantitativeValueFloat ;
+                gr:hasValueFloat "17.1"^^xsd:float ;
+                qudt:unit cloud:Gibibyte
+              ] ;
+      cloud:hasVirtualCores
+              [ rdf:type gr:QuantitativeValueInteger ;
+                gr:hasValueInteger 2 ;
+                qudt:unit <http://qudt.org/vocab/unit#Number>
+              ].
+
+:ec2M2HighMemoryQuadrupleExtraLargeInstanceType
+      rdf:type cloud:ComputationService ;
+      rdfs:label "amazon elastic compute cloud service m2.4xlarge instance"^^xsd:string ;
+      cloud:hasComputingPerformance
+              [ rdf:type gr:QuantitativeValueFloat ;
+                gr:hasValueFloat "26"^^xsd:float ;
+                qudt:unit :EC2ComputeUnit
+              ] ;
+      cloud:hasIOPerformance
+              cloud:HighIOPerformance ;
+      cloud:hasInternalStorage
+              [ rdf:type gr:QuantitativeValueFloat ;
+                gr:hasValueFloat "1680"^^xsd:float ;
+                qudt:unit cloud:Gibibyte
+              ] ;
+      cloud:hasMemory
+              [ rdf:type gr:QuantitativeValueFloat ;
+                gr:hasValueFloat "68.4"^^xsd:float ;
+                qudt:unit cloud:Gibibyte
+              ] ;
+      cloud:hasVirtualCores
+              [ rdf:type gr:QuantitativeValueInteger ;
+                gr:hasValueInteger 8 ;
+                qudt:unit <http://qudt.org/vocab/unit#Number>
+              ] .
+
+
+:ec2M1ExtraLargeInstanceType
+      rdf:type cloud:ComputationService ;
+      rdfs:label "amazon elastic compute cloud service m1.xlarge instance"^^xsd:string ;
+      cloud:hasComputingPerformance
+              [ rdf:type gr:QuantitativeValueFloat ;
+                gr:hasValueFloat "8"^^xsd:float ;
+                qudt:unit :EC2ComputeUnit
+              ] ;
+      cloud:hasIOPerformance
+              cloud:HighIOPerformance ;
+      cloud:hasInternalStorage
+              [ rdf:type gr:QuantitativeValueFloat ;
+                gr:hasValueFloat "1680"^^xsd:float ;
+                qudt:unit cloud:Gibibyte
+              ] ;
+      cloud:hasMemory
+              [ rdf:type gr:QuantitativeValueFloat ;
+                gr:hasValueFloat "15"^^xsd:float ;
+                qudt:unit cloud:Gibibyte
+              ] ;
+      cloud:hasVirtualCores
+              [ rdf:type gr:QuantitativeValueInteger ;
+                gr:hasValueInteger 4 ;
+                qudt:unit <http://qudt.org/vocab/unit#Number>
+              ] .
+
+:ec2M1LargeInstanceType
+      rdf:type cloud:ComputationService ;
+      rdfs:label "amazon elastic compute cloud service m1.large instance"^^xsd:string ;
+      cloud:hasComputingPerformance
+              [ rdf:type gr:QuantitativeValueFloat ;
+                gr:hasValueFloat "4"^^xsd:float ;
+                qudt:unit :EC2ComputeUnit
+              ] ;
+      cloud:hasIOPerformance
+              cloud:ModerateIOPerformance ;
+      cloud:hasInternalStorage
+              [ rdf:type gr:QuantitativeValueFloat ;
+                gr:hasValueFloat "840"^^xsd:float ;
+                qudt:unit cloud:Gibibyte
+              ] ;
+      cloud:hasMemory
+              [ rdf:type gr:QuantitativeValueFloat ;
+                gr:hasValueFloat "7.5"^^xsd:float ;
+                qudt:unit cloud:Gibibyte
+              ] ;
+      cloud:hasVirtualCores
+              [ rdf:type gr:QuantitativeValueInteger ;
+                gr:hasValueInteger 2 ;
+                qudt:unit <http://qudt.org/vocab/unit#Number>
+              ].
+
+:ec2M1MediumInstanceService
+      rdf:type cloud:ComputationService ;
+      rdfs:label "amazon elastic compute cloud service m1.medium instance"^^xsd:string ;
+      cloud:hasComputingPerformance
+              [ rdf:type gr:QuantitativeValueFloat ;
+                gr:hasValueFloat "2"^^xsd:float ;
+                qudt:unit :EC2ComputeUnit
+              ] ;
+      cloud:hasIOPerformance
+              cloud:ModerateIOPerformance ;
+      cloud:hasInternalStorage
+              [ rdf:type gr:QuantitativeValueFloat ;
+                gr:hasValueFloat "410"^^xsd:float ;
+                qudt:unit cloud:Gibibyte
+              ] ;
+      cloud:hasMemory
+              [ rdf:type gr:QuantitativeValueFloat ;
+                gr:hasValueFloat "3.75"^^xsd:float ;
+                qudt:unit cloud:Gibibyte
+              ] ;
+      cloud:hasVirtualCores
+              [ rdf:type gr:QuantitativeValueInteger ;
+                gr:hasValueInteger 1 ;
+                qudt:unit <http://qudt.org/vocab/unit#Number>
+              ] .
+
+:ec2M1SmallInstanceService
+      rdf:type cloud:ComputationService ;
+      rdfs:label "amazon elastic compute cloud service m1.small instance"^^xsd:string ;
+      cloud:hasComputingPerformance
+              [ rdf:type gr:QuantitativeValueFloat ;
+                gr:hasValueFloat "1"^^xsd:float ;
+                qudt:unit :EC2ComputeUnit
+              ] ;
+      cloud:hasIOPerformance
+              cloud:LowIOPerformance ;
+      cloud:hasInternalStorage
+              [ rdf:type gr:QuantitativeValueFloat ;
+                gr:hasValueFloat "160"^^xsd:float ;
+                qudt:unit cloud:Gibibyte
+              ] ;
+      cloud:hasMemory
+              [ rdf:type gr:QuantitativeValueFloat ;
+                gr:hasValueFloat "1.7"^^xsd:float ;
+                qudt:unit cloud:Gibibyte
+              ] ;
+      cloud:hasVirtualCores
+              [ rdf:type gr:QuantitativeValueInteger ;
+                gr:hasValueInteger 1 ;
+                qudt:unit <http://qudt.org/vocab/unit#Number>
+              ].
+
+:ec2M3DoubleExtraLargeInstanceType
+      rdf:type cloud:ComputationService ;
+      rdfs:label "amazon elastic compute cloud service m3.2xlarge instance"^^xsd:string ;
+      cloud:hasComputingPerformance
+              [ rdf:type gr:QuantitativeValueFloat ;
+                gr:hasValueFloat "26"^^xsd:float ;
+                qudt:unit :EC2ComputeUnit
+              ] ;
+      cloud:hasIOPerformance
+              cloud:HighIOPerformance ;
+      cloud:hasInternalStorage
+              [ rdf:type gr:QuantitativeValueFloat ;
+                gr:hasValueFloat "160"^^xsd:float ;
+                qudt:unit cloud:Gibibyte
+              ] ;
+      cloud:hasMemory
+              [ rdf:type gr:QuantitativeValueFloat ;
+                gr:hasValueFloat "30"^^xsd:float ;
+                qudt:unit cloud:Gibibyte
+              ] ;
+      cloud:hasVirtualCores
+              [ rdf:type gr:QuantitativeValueInteger ;
+                gr:hasValueInteger 8 ;
+                qudt:unit <http://qudt.org/vocab/unit#Number>
+              ] .
+
+:ec2M3ExtraLargeInstanceType
+      rdf:type cloud:ComputationService ;
+      rdfs:label "amazon elastic compute cloud service m3.xlarge instance"^^xsd:string ;
+      cloud:hasComputingPerformance
+              [ rdf:type gr:QuantitativeValueFloat ;
+                gr:hasValueFloat "13"^^xsd:float ;
+                qudt:unit :EC2ComputeUnit
+              ] ;
+      cloud:hasIOPerformance
+              cloud:HighIOPerformance ;
+      cloud:hasInternalStorage
+              [ rdf:type gr:QuantitativeValueFloat ;
+                gr:hasValueFloat "80"^^xsd:float ;
+                qudt:unit cloud:Gibibyte
+              ] ;
+      cloud:hasMemory
+              [ rdf:type gr:QuantitativeValueFloat ;
+                gr:hasValueFloat "15"^^xsd:float ;
+                qudt:unit cloud:Gibibyte
+              ] ;
+      cloud:hasVirtualCores
+              [ rdf:type gr:QuantitativeValueInteger ;
+                gr:hasValueInteger 4 ;
+                qudt:unit <http://qudt.org/vocab/unit#Number>
+              ] .

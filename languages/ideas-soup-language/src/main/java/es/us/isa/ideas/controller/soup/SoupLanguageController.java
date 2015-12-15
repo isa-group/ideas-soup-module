@@ -38,8 +38,8 @@ import es.us.isa.puri.model.FavoritesPreference;
 import es.us.isa.puri.model.HighestPreference;
 import es.us.isa.puri.model.LowestPreference;
 import es.us.isa.puri.model.PreferenceTerm;
-import es.us.isa.ideas.common.AppResponse;
-import es.us.isa.ideas.common.AppResponse.Status;
+import es.us.isa.ideas.module.common.AppResponse;
+import es.us.isa.ideas.module.common.AppResponse.Status;
 import es.us.isa.ideas.module.controller.BaseLanguageController;
 
 @Controller

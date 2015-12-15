@@ -1,0 +1,27 @@
+[
+    {
+        "id": "rank",
+        "description": "Execute the rank operation",
+        "opUri": "/language/operation/rank/execute",
+        "opMethod": "POST",
+        "parameters":
+                {
+                    "id": "rank",
+                    "content": "",
+                    "fileUri": "/tests/resource/soup/Test - Lowest Preference",
+                    "auxArg0": "/tests/resource/soup/AmazonEC2"
+                },
+        "results": [
+            {
+                "status": "OK",
+                "message": "<pre>1. Name: amazon elastic compute cloud service m1.small instance -  Computing Performance: 1.0 ECU -  IO Performance: LowIOPerformance -  Internal Storage: 160.0 Gibibyte -  Memory: 1.7 Gibibyte -  Virtual Cores: 1</pre><pre>2. Name: amazon elastic compute cloud service m1.medium instance -  Computing Performance: 2.0 ECU -  IO Performance: ModerateIOPerformance -  Internal Storage: 410.0 Gibibyte -  Memory: 3.75 Gibibyte -  Virtual Cores: 1</pre><pre>3. Name: amazon elastic compute cloud service m2.xlarge instance -  Computing Performance: 6.5 ECU -  IO Performance: ModerateIOPerformance -  Internal Storage: 420.0 Gibibyte -  Memory: 17.1 Gibibyte -  Virtual Cores: 2</pre><pre>4. Name: amazon elastic compute cloud service m1.large instance -  Computing Performance: 4.0 ECU -  IO Performance: ModerateIOPerformance -  Internal Storage: 840.0 Gibibyte -  Memory: 7.5 Gibibyte -  Virtual Cores: 2</pre><pre>5. Name: amazon elastic compute cloud service c1.medium instance -  Computing Performance: 5.0 ECU -  IO Performance: ModerateIOPerformance -  Internal Storage: 340.0 Gibibyte -  Memory: 1.7 Gibibyte -  Virtual Cores: 2</pre><pre>6. Name: amazon elastic compute cloud service m1.xlarge instance -  Computing Performance: 8.0 ECU -  IO Performance: HighIOPerformance -  Internal Storage: 1680.0 Gibibyte -  Memory: 15.0 Gibibyte -  Virtual Cores: 4</pre><pre>7. Name: amazon elastic compute cloud service m3.xlarge instance -  Computing Performance: 13.0 ECU -  IO Performance: HighIOPerformance -  Internal Storage: 80.0 Gibibyte -  Memory: 15.0 Gibibyte -  Virtual Cores: 4</pre><pre>8. Name: amazon elastic compute cloud service m2.2xlarge instance -  Computing Performance: 13.0 ECU -  IO Performance: ModerateIOPerformance -  Internal Storage: 850.0 Gibibyte -  Memory: 34.2 Gibibyte -  Virtual Cores: 4</pre><pre>9. Name: amazon elastic compute cloud service m2.4xlarge instance -  Computing Performance: 26.0 ECU -  IO Performance: HighIOPerformance -  Internal Storage: 1680.0 Gibibyte -  Memory: 68.4 Gibibyte -  Virtual Cores: 8</pre><pre>10. Name: amazon elastic compute cloud service cg1.4xlarge instance -  Computing Performance: 33.5 ECU -  IO Performance: VeryHighIOPerformance -  Internal Storage: 1680.0 Gibibyte -  Memory: 22.5 Gibibyte -  Virtual Cores: 8</pre><pre>11. Name: amazon elastic compute cloud service m3.2xlarge instance -  Computing Performance: 26.0 ECU -  IO Performance: HighIOPerformance -  Internal Storage: 160.0 Gibibyte -  Memory: 30.0 Gibibyte -  Virtual Cores: 8</pre><pre>12. Name: amazon elastic compute cloud service c1.xlarge instance -  Computing Performance: 20.0 ECU -  IO Performance: HighIOPerformance -  Internal Storage: 1680.0 Gibibyte -  Memory: 7.0 Gibibyte -  Virtual Cores: 8</pre><pre>13. Name: amazon elastic compute cloud service hi1.4xlarge instance -  Computing Performance: 35.0 ECU -  IO Performance: VeryHighIOPerformance -  Internal Storage: 2.0 Tebibyte -  Memory: 60.5 Gibibyte -  Virtual Cores: 8</pre><pre>14. Name: amazon elastic compute cloud service cc2.8xlarge instance -  Computing Performance: 88.0 ECU -  IO Performance: VeryHighIOPerformance -  Internal Storage: 3360.0 Gibibyte -  Memory: 60.5 Gibibyte -  Virtual Cores: 16</pre>",
+                "htmlMessage": null,
+                "data": null,
+                "context": null,
+                "fileUri": "/tests/resource/soup/Test - Lowest Preference",
+                "annotations": null,
+                "customStruct": null
+            }
+        ]
+    }
+]

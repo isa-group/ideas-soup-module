@@ -1,0 +1,7 @@
+@prefix soup: <http://www.isa.us.es/preferences#>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix : <http://www.example.org#>.
+
+:userPreference rdf:type soup:LowestPreference;
+    soup:hasRankingMechanism soup:DefaultLowestImpl;
+    soup:refersTo :hasVirtualCores.

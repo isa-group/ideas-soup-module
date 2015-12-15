@@ -2,10 +2,10 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>es.us.isa.ideas.soup</groupId>
-	<artifactId>ideassoup</artifactId>
+	<artifactId>ideas-soup-module</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
-	<name>IDEAS-SOUP</name>
+	<name>ideas-soup-module</name>
 	<modules>
 		<module>languages/ideas-soup-language</module>
 	</modules>

@@ -1,32 +1,27 @@
 {
-	id: "ideas-soup-language",
-	extension: "soup",
-	name: "Soup",
-	formats: 
-		[
-			{format: "soup",
-			 editorModeId: "ace/mode/soup",
-			 _editorModeURI: "mode-soup.js",
-			 editorThemeId: "ace/theme/soup",
-			 _editorThemeURI: "theme-soup.js",
-			 checkLanguage: "true"}
-		],
-				 
-	operations:
-		[
-			 {id: "rank",
-              name: "Rank",
-              data: {},
-              _remoteExecution: "false",
-              action: "function(operationStructure, fileUri){
-			  		CommandApi.fetchFileContentsBeforeExecutingOperation(operationStructure,
-			  		fileUri, 'soup', 'rank', 
-			    	'Rank web services from provider', 
-			   		' ', 
-			  		'Rank', 
-			  		function(result){}, 
-			  		function(result){})}"
-              }                    
-   		],          
-	inspectorLoader: "function(loader, format) {}"
+    "id": "ideas-soup-language",
+    "extension": "soup",
+    "name": "Soup",
+    "formats":
+            [
+                {
+                    "format": "soup",
+                    "editorModeId": "ace/mode/soup",
+                    "_editorModeURI": "mode-soup.js",
+                    "editorThemeId": "ace/theme/soup",
+                    "_editorThemeURI": "theme-soup.js",
+                    "checkLanguage": "true"
+                }
+            ],
+    "operations":
+            [
+                {
+                    "id": "rank",
+                    "name": "Rank",
+                    "data": {},
+                    "_remoteExecution": "false",
+                    "action": "function(operationStructure, fileUri){ CommandApi.fetchFileContentsBeforeExecutingOperation(operationStructure, fileUri, 'soup', 'rank', 'Rank web services from provider', ' ', 'Rank', function(result){}, function(result){})}"
+                }
+            ],
+    "inspectorLoader": "function(loader, format) {}"
 }
